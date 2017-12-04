@@ -15,14 +15,12 @@
     <!-- 头部导航栏与侧边导航栏 start -->
     <header>
         <nav class="light-blue lighten-1" role="navigation">
-            <div class="nav-wrapper container"><a id="logo-container" href="about.html" class="brand-logo">在线书店</a>
+            <div class="nav-wrapper container"><a id="logo-container" href="/about" class="brand-logo">在线书店</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#"><i class="material-icons">home</i></a></li>
-                    <li><a href="#"><i class="material-icons">store</i></a></li>
-                    <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
-                    <li><a href="#"><i class="material-icons">perm_identity</i></a></li>
-                    <li><a href="#"><i class="material-icons">work</i></a></li>
-                    <li><a href="#"><i class="material-icons">quit</i></a></li>
+                    <li><a><i class="material-icons">home</i></a></li>
+                    <li><a href="/store"><i class="material-icons">store</i></a></li>
+                    <li><a href="/trolley"><i class="material-icons">shopping_cart</i></a></li>
+                    <li><a href="/user_center"><i class="material-icons">perm_identity</i></a></li>
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
@@ -33,14 +31,13 @@
                             </div>
                         </div>
                     </li>
-                    <li><a href="#"><i class="material-icons">home</i>首页</a></li>
-                    <li><a href="#"><i class="material-icons">store</i>书库</a></li>
-                    <li><a href="#"><i class="material-icons">shopping_cart</i>购物车</a></li>
-                    <li><a href="#"><i class="material-icons">perm_identity</i>用户中心</a></li>
-                    <li><a href="#"><i class="material-icons">work</i>管理员工具</a></li>
+                    <li><a><i class="material-icons">home</i>首页</a></li>
+                    <li><a href="/store"><i class="material-icons">store</i>书库</a></li>
+                    <li><a href="/trolley"><i class="material-icons">shopping_cart</i>购物车</a></li>
+                    <li><a href="/user_center"><i class="material-icons">perm_identity</i>用户中心</a></li>
 
                 </ul>
-                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <a data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
             </div>
         </nav>
     </header>
@@ -62,9 +59,9 @@
 
                     <div class="card" style="max-width: 60em; margin-left: auto; margin-right: auto;">
                         <div class="input-field">
-                            <input id="search" type="search" style="text-indent: 4em;">
+                            <input id="search" type="search" placeholder="请输入关键字（书名或作者名）" style="text-indent: 4em;">
                             <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                            <i class="material-icons" style="top: .25em;">close</i>
+                            <i id="search_done" class="material-icons" style="top: .25em;">done</i>
                         </div>
                     </div>
 
@@ -78,7 +75,31 @@
         <!-- 第二栏 start -->
         <div class="container">
             <div class="section">
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                            <h5 class="center">新书速递</h5>
+                            <p class="light">新书更新速度快凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数</p>
+                        </div>
+                    </div>
 
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                            <h5 class="center">二手书交易</h5>
+                            <p class="light">可以很轻松地进行二手书交易。凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数凑字数</p>
+                        </div>
+                    </div>
+
+                    <div class="col s12 m4">
+                        <div class="icon-block">
+                            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                            <h5 class="center">方便易用</h5>
+                            <p class="light">反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。反正凑字数就好了。</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- 第二栏 end -->
@@ -98,9 +119,9 @@
                         <h5 class="white-text">站内链接</h5>
                         <ul>
                             <li><a class="grey-text text-lighten-3">首页</a></li>
-                            <li><a class="grey-text text-lighten-3">书库</a></li>
-                            <li><a class="grey-text text-lighten-3">购物车</a></li>
-                            <li><a class="grey-text text-lighten-3">用户中心</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/store">书库</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/trolley">购物车</a></li>
+                            <li><a class="grey-text text-lighten-3" href="/user_center">用户中心</a></li>
                         </ul>
                     </div>
                 </div>
@@ -119,7 +140,7 @@
         <div class="footer-copyright">
             <div class="container">
                 © 2017 Copyright 李伟文、梅鹏、王昕、张波、鲍鑫垚、李彬
-                <a class="grey-text text-lighten-4 right" href="about.html">关于本站</a>
+                <a class="grey-text text-lighten-4 right" href="/about">关于本站</a>
             </div>
         </div>
     </footer>
@@ -127,6 +148,7 @@
 
     <!-- Scripts -->
     <script src="/WebRoot/js/jquery-3.2.1.min.js"></script>
+    <script src="/WebRoot/js/jquery.cookie.js"></script>
     <script src="/WebRoot/js/materialize.min.js"></script>
     <script src="/WebRoot/js/index/init.js"></script>
 </body>
