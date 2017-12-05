@@ -16,8 +16,7 @@ def registered_account(_mail, _password, _address, _name):
         activation_deadline=datetime.datetime.now() + datetime.timedelta(days=1)
     )
 
-    activated_obj = Account.get_account_by_mail(_mail)
-    if activated_obj is not None or UnactivatedAccount.has_waiting_activated_account_by_mail(new_obj.mail):
+    if Account.has_account_mail_is(_mail) or UnactivatedAccount.has_waiting_activated_account_mail_is(new_obj.mail):
         ret["code"] = 1
     elif generate_mail_activation(
             new_obj.name, new_obj.mail, new_obj.activation_deadline.strftime("%Y-%m-%d %H:%M:%S"),

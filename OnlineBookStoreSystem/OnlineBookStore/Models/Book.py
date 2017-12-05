@@ -91,4 +91,5 @@ class Book(models.Model):
 
     @staticmethod
     def get_by_uuid(_uuid):
-        return Book.objects.filter(uuid=_uuid)
+        obj = Book.objects.get(uuid=_uuid)
+        return obj

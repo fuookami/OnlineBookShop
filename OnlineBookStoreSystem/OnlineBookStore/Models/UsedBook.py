@@ -39,14 +39,15 @@ class UsedBook(models.Model):
     server_fee = models.IntegerField(
         default=0,
         validators=[
-            MinValueValidator(0),
-            MaxValueValidator(price)
+            MinValueValidator(0)
         ],
         verbose_name="服务费"
     )
     shopping_order = models.ForeignKey(
         ShoppingOrder,
+        blank=True,
         null=True,
+        on_delete=models.SET_NULL,
         verbose_name="购物订单"
     )
     description = models.TextField(

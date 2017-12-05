@@ -64,6 +64,10 @@ class Account(models.Model):
         verbose_name = "账号"
 
     @staticmethod
+    def has_account_mail_is(_mail):
+        return Account.objects.filter(mail=_mail).exists()
+
+    @staticmethod
     def get_account_by_mail(_mail):
         return Account.objects.filter(mail=_mail).get()
 
@@ -73,16 +77,18 @@ class Account(models.Model):
 
     @staticmethod
     def login(_mail, _password):
-        obj = Account.get_account_by_mail(_mail)
-
         ret = {}
-        if obj is None:
+        if not Account.has_account_mail_is(_mail):
             ret["code"] = 1
-        elif obj.password == _password:
-            ret["code"] = 0
-            ret["uuid"] = bytes.decode(base64.b64encode(obj.uuid.bytes))
-            ret["type"] = obj.type
         else:
-            ret["code"] = 2
+            obj = Account.get_account_by_mail(_mail)
+
+            if obj.password == _password:
+                ret["code"] = 0
+                ret["uuid"] = bytes.decode(base64.b64encode(obj.uuid.bytes))
+                ret["type"] = obj.type
+                ret["name"] = bytes.decode(base64.b64encode(str.encode(obj.name)))
+            else:
+                ret["code"] = 2
 
         return ret

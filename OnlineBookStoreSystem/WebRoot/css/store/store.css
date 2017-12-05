@@ -1,0 +1,33 @@
+#book_container div {
+    padding: 5px 3px;
+}
+
+#book_container .card {
+    height: 25.5em;
+}
+
+#book_container .card .card-image {
+    height: 18em;
+}
+
+#book_container .card .card-content {
+    height: 5em;
+}
+
+#book_container .card .card-action {
+    height: 1.5em;
+}
+
+#book_container .card .card-action span {
+    margin-left: .5em;
+}
+
+#book_container .card .card-action a {
+    margin-right: 0;
+    margin-left: 1px;
+    cursor: pointer;
+}
+
+#book_container .activator {
+    cursor: pointer;
+}

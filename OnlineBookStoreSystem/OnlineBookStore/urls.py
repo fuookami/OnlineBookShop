@@ -10,8 +10,12 @@ urlpatterns = [
     url(r'^index$', views.go_to_index),
     url(r'^about$', views.go_to_about),
     url(r'^store$', views.go_to_store),
+    url(r'^store/check_book_detail$', views.go_to_check_book_detail),
+    url(r'^store/register_used_book$', views.go_to_register_used_book),
     url(r'^trolley$', views.go_to_trolley),
     url(r'^user_center$', views.go_to_user_center),
+    url(r'^user_center/login$', views.go_to_login),
+    url(r'^user_center/register_account$', views.go_to_register_account),
 
     url(r'^account/register$', registered_account_request),
     url(r'^account/register/activation_token=(\S[^;]+)$', activate_account_request),

@@ -128,5 +128,5 @@ STATICFILES_DIRS = (
     ('fonts', os.path.join(STATIC_ROOT, 'fonts').replace('\\', '/'))
 )
 
-MEDIA_ROOT = '/MediaStore/'
-MEDIA_URL = '/MediaStore/'
+MEDIA_ROOT = '/WebRoot/resource/'
+MEDIA_URL = '/WebRoot/resource/'

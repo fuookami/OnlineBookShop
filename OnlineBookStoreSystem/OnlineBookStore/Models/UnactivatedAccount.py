@@ -63,10 +63,10 @@ class UnactivatedAccount(models.Model):
             .filter(is_activation_finished=False).get()
 
     @staticmethod
-    def has_waiting_activated_account_by_mail(target_mail):
-        obj = UnactivatedAccount.get_waiting_activated_account_by_mail(target_mail)
-
-        return False if obj is None else True
+    def has_waiting_activated_account_mail_is(target_mail):
+        return UnactivatedAccount.objects.filter(mail=target_mail) \
+            .filter(activation_deadline__gt=datetime.datetime.now()) \
+            .filter(is_activation_finished=False).exists()
 
     @staticmethod
     def get_waiting_activated_account_by_token(token):

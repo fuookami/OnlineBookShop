@@ -6,7 +6,7 @@ def search_book(keywords):
 
 
 def get_book_detail(uuid):
-    obj = Book(Book.get_by_uuid(uuid))
+    obj = Book.get_by_uuid(uuid)
 
     return {
         "title": obj.title,
@@ -15,5 +15,5 @@ def get_book_detail(uuid):
         "description": obj.description,
         "isbn": obj.isbn,
         "price": obj.price,
-        "image_url": obj.image_url
+        "image_url": obj.image_url.url
     }

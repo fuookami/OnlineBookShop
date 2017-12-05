@@ -1,4 +1,5 @@
 import base64
+import uuid
 
 from .BookHandlerModule import search_book, get_book_detail
 from .UsedBookHandlerModule import get_on_selling_used_book_of_book, get_server_fee, register_used_book
@@ -12,8 +13,9 @@ def get_search_book_request(request):
 
 def get_book_detail_request(request):
     data = request.POST
-    ret = get_book_detail(data["uuid"])
-    ret["used_books"] = get_on_selling_used_book_of_book(data["uuid"])
+    _uuid = uuid.UUID(bytes=base64.b64decode(data["uuid"]))
+    ret = get_book_detail(_uuid)
+    ret["used_books"] = get_on_selling_used_book_of_book(_uuid)
     return before_send_dispose(ret)
 
 
@@ -25,8 +27,8 @@ def get_server_fee_request(request):
 def register_used_book_request(request):
     data = request.POST
     register_ret = register_used_book(
-        bytes.decode(base64.b64decode(data["book_uuid"])),
-        bytes.decode(base64.b64decode(data["seller_uuid"])),
+        uuid.UUID(bytes=base64.b64decode(data["book_uuid"])),
+        uuid.UUID(bytes=base64.b64decode(data["seller_uuid"])),
         data["price"],
         data["description"]
     )
